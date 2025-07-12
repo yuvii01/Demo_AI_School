@@ -162,29 +162,24 @@ const DivisionJEE = ({examType}) => {
         </ActionBox>
       </BoxGrid>
       {showDoubts && (
-        <Popup>
-          <CloseBtn onClick={() => setShowDoubts(false)}>✖</CloseBtn>
-          <DoubtsJEE examType = {examType}/>
-        </Popup>
+        <>
+          {navigate('/demo/doubts')}
+        </>
       )}
       {showPaper && (
-        <Popup>
-          <CloseBtn onClick={() => setShowPaper(false)}>✖</CloseBtn>
-          <PaperJEE examType = {examType} />
-        </Popup>
+        <>
+          {navigate('/demo/paper')}
+        </>
       )}
       {showQuiz && (
-        <Popup>
-          <CloseBtn onClick={() => setShowQuiz(false)}>✖</CloseBtn>
-           <QuizJEE examType = {examType} /> 
-          
-        </Popup>
+        <>
+          {navigate('/demo/quiz')}
+        </>
       )}
       {showPlanner && (
-        <Popup>
-          <CloseBtn onClick={() => setShowPlanner(false)}>✖</CloseBtn>
-          <RevisionJEE examType = {examType} />
-        </Popup>
+        <>
+          {navigate('/demo/revision')}
+        </>
       )}
     </Container>
   );
